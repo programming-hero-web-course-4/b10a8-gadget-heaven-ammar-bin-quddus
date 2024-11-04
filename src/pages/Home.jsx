@@ -1,6 +1,11 @@
 import React from "react";
+import Categories from "../components/Categories";
+import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const category = useLoaderData();
+  //console.log(category);
+
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-full max-sm:h-[100vh] sm:h-[130vh]">
@@ -30,15 +35,22 @@ const Home = () => {
         Explore Cutting-Edge Gadgets
       </p>
 
-      <div className="flex max-md:flex-col justify-start items-center gap-5 mt-8">
-        <div className="w-full flex-wrap md:w-1/4 p-5 border-2 flex flex-row md:flex-col items-center justify-center gap-4">
-          <button className="btn md:w-full lg:text-lg font-semibold">All</button>
-          <button className="btn md:w-full lg:text-lg font-semibold">Laptops</button>
-          <button className="btn md:w-full lg:text-lg font-semibold">Smartphones</button>
-          <button className="btn md:w-full lg:text-lg font-semibold">Accessories</button>
-          <button className="btn md:w-full lg:text-lg font-semibold">Smart Watches</button>
+      <div className="w-full flex max-md:flex-col justify-start items-start gap-5 mt-8">
+        {/* category btn */}
+
+        <div className="w-full flex-wrap md:w-1/4 py-3 flex flex-row md:flex-col items-center justify-center gap-4">
+          <NavLink
+            to='/'
+            className={`btn md:w-full lg:text-lg font-semibold ${({isActive}) => isActive ? 'active':''}`}
+          >
+            <button>All Products</button>
+          </NavLink>
+          {category.map((category) => (
+            <Categories key={category.id} category={category} />
+          ))}
         </div>
-        <div className="w-full md:w-3/4 p-5 border-2"></div>
+
+        <Outlet />
       </div>
     </div>
   );

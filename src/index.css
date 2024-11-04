@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+    background-color: #9538E2;
+    color: white;
+}
+
+.navBtn {
+    background-color: white;
+    color: black;
+}

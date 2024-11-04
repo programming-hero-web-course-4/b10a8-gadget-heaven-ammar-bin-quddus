@@ -1,24 +1,45 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const links = (
     <>
       <li>
-        <Link to='/'>Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "navBtn" : "")}
+        >
+          Home
+        </NavLink>
       </li>
+
       <li>
-        <Link>Statistics</Link>
+        <NavLink
+          to="/statistics"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Statistics
+        </NavLink>
       </li>
+
       <li>
-        <Link to='/dashboard'>Dashboard</Link>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Dashboard
+        </NavLink>
       </li>
     </>
   );
 
   const location = useLocation();
-  console.log(location)
+  //console.log(location)
   return (
-    <div className={`navbar w-11/12 mx-auto ${location.pathname === '/' ? `bg-[#9538E2] text-white` : `bg-base-100`}`}>
+    <div
+      className={`navbar rounded-t-xl w-11/12 mx-auto ${
+        location.pathname === "/" ? `bg-[#9538E2] text-white` : `bg-base-100`
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,13 +71,13 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end gap-6">
-        <button className="btn relative rounded-full">
+        <button className="btn btn-circle relative">
           <i className="fa-solid fa-cart-shopping text-lg"></i>
           <div className="w-6 h-6 rounded-full bg-blue-300 font-semibold absolute -right-2 -top-2 flex items-center justify-center">
             4
           </div>
         </button>
-        <button className="btn relative rounded-full">
+        <button className="btn btn-circle relative">
           <i className="fa-solid fa-heart text-lg"></i>
           <div className="w-6 h-6 rounded-full bg-blue-300 font-semibold absolute -right-2 -top-2 flex items-center justify-center">
             5
