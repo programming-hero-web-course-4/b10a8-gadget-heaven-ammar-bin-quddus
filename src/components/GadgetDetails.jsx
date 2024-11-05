@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredProductList } from "../utilities/addToStorage";
 
 const GadgetDetails = () => {
   const { gadgetId } = useParams();
@@ -15,6 +16,7 @@ const GadgetDetails = () => {
   //console.log(productData);
 
   const {
+    product_id,
     product_title,
     product_image,
     price,
@@ -23,6 +25,10 @@ const GadgetDetails = () => {
     rating,
     description,
   } = productData;
+
+  const handleAddToCart = (id) => {
+    addToStoredProductList(id)
+  }
 
   return (
     <div className="w-full h-screen relative mb-36 max-md:h-[250vh]">
@@ -56,7 +62,7 @@ const GadgetDetails = () => {
           <p className="font-bold">Rating</p>
           <p>rating div</p>
           <div className="flex justify-start items-center gap-3 flex-wrap">
-            <button className="btn btn-outline bg-[#9538E2] text-white">
+            <button onClick={() => handleAddToCart(product_id)} className="btn btn-outline bg-[#9538E2] text-white">
               Add To Cart <i className="fa-solid fa-cart-shopping text-xl"></i>
             </button>
             <button className="btn btn-outline bg-[#9538E2] btn-circle text-white">
