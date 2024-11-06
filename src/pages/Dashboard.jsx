@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CartList from "../components/CartList";
 import WishList from "../components/WishList";
+import { Helmet } from "react-helmet-async";
+
 
 const Dashboard = () => {
   const [toggle, setToggle] = useState({
@@ -24,6 +26,9 @@ const Dashboard = () => {
 
   return (
     <div className="w-full mb-8">
+      <Helmet>
+        <title>DashBoard | Gadget heaven</title>
+      </Helmet>
       <div className="text-center text-white w-full bg-[#9538E2] pb-20 pt-8">
         <p className="text-2xl font-bold">Dashboard</p>
         <p className="text-sm mt-4 text-wrap">

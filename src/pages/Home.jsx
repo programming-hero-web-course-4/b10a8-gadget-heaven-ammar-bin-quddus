@@ -1,6 +1,8 @@
 import React from "react";
 import Categories from "../components/Categories";
 import { NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Home = () => {
   const category = useLoaderData();
@@ -8,6 +10,9 @@ const Home = () => {
 
   return (
     <div className="w-11/12 mx-auto">
+      <Helmet>
+        <title>Home | Gadget heaven</title>
+      </Helmet>
       <div className="w-full max-sm:h-[100vh] sm:h-[130vh]">
         <div className="bg-[#9538E2] relative py-6 w-full max-sm:h-[75%] sm:h-[60%] flex flex-col justify-start items-center text-center gap-8 rounded-b-xl">
           <p className="text-2xl md:text-4xl font-bold text-white">

@@ -1,8 +1,12 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Statistics = () => {
   return (
     <div>
+      <Helmet>
+        <title>Statistics | Gadget heaven</title>
+      </Helmet>
       <div className="text-center text-white w-full bg-[#9538E2] pb-32 pt-8">
         <p className="text-2xl font-bold">Statistics</p>
         <p className="text-sm mt-4 text-wrap">

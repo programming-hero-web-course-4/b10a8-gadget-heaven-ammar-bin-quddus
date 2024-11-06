@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
+import { getProductList, getWishList } from "../utilities/addToStorage";
 
 const NavBar = () => {
   const links = (
@@ -34,6 +35,12 @@ const NavBar = () => {
 
   const location = useLocation();
   //console.log(location)
+
+  const CartCount = getProductList();
+  //console.log(count.length)
+
+  const wishCount = getWishList();
+
   return (
     <div
       className={`navbar rounded-t-xl w-11/12 mx-auto ${
@@ -74,13 +81,13 @@ const NavBar = () => {
         <button className="btn btn-circle relative">
           <i className="fa-solid fa-cart-shopping text-lg"></i>
           <div className="w-6 h-6 rounded-full bg-blue-300 font-semibold absolute -right-2 -top-2 flex items-center justify-center">
-            4
+            {CartCount.length}
           </div>
         </button>
         <button className="btn btn-circle relative">
           <i className="fa-solid fa-heart text-lg"></i>
           <div className="w-6 h-6 rounded-full bg-blue-300 font-semibold absolute -right-2 -top-2 flex items-center justify-center">
-            5
+            {wishCount.length}
           </div>
         </button>
       </div>

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {
-  addToStoredProductList,
-  getProductList,
-} from "../utilities/addToStorage";
-import { useLoaderData } from "react-router-dom";
+import { getProductList } from "../utilities/addToStorage";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import ShowCart from "./ShowCart";
 
 const CartList = () => {
@@ -38,15 +35,19 @@ const CartList = () => {
 
   const [isPurchase, setIsPurchase] = useState(false);
 
-  console.log(isPurchase)
+  console.log(isPurchase);
 
   const handlePurchase = () => {
     setIsPurchase(true);
   };
 
+  const navigate = useNavigate();
+
   const handleCloseModal = () => {
     setIsPurchase(!isPurchase);
+    localStorage.removeItem("product-list");
     setCart([]);
+    navigate('/');
   };
 
   return (
