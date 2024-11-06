@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredProductList } from "../utilities/addToStorage";
+import { addToStoredProductList, addToStoredWishList } from "../utilities/addToStorage";
 
 const GadgetDetails = () => {
   const { gadgetId } = useParams();
@@ -30,8 +30,12 @@ const GadgetDetails = () => {
     addToStoredProductList(id)
   }
 
+  const handleAddToWishList = (id) => {
+    addToStoredWishList(id);
+  }
+
   return (
-    <div className="w-full h-screen relative mb-36 max-md:h-[250vh]">
+    <div className="w-full md:h-screen relative mb-36 max-md:h-[250vh]">
       <div className="text-center text-white w-full bg-[#9538E2] pb-32 pt-8">
         <p className="text-2xl font-bold">Product Details</p>
         <p className="text-sm mt-4 text-wrap">
@@ -65,7 +69,7 @@ const GadgetDetails = () => {
             <button onClick={() => handleAddToCart(product_id)} className="btn btn-outline bg-[#9538E2] text-white">
               Add To Cart <i className="fa-solid fa-cart-shopping text-xl"></i>
             </button>
-            <button className="btn btn-outline bg-[#9538E2] btn-circle text-white">
+            <button onClick={() => handleAddToWishList(product_id)} className="btn btn-outline bg-[#9538E2] btn-circle text-white">
               <i className="fa-solid fa-heart text-xl"></i>
             </button>
           </div>

@@ -5,7 +5,7 @@ const Gadget = ({ gadget }) => {
   const { product_id, product_image, price, product_title } = gadget;
 
   return (
-    <div className="p-2 w-full bg-[#9538E2]/50 shadow-xl rounded-xl flex flex-col gap-3 justify-center items-start">
+    <div className="p-2 w-full bg-white shadow-xl rounded-xl flex flex-col gap-3 justify-center items-start">
       <div className="w-full flex justify-center items-center">
         <img
           className="w-48 h-48 rounded-xl"
