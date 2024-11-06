@@ -1,0 +1,74 @@
+[
+  {
+    "customer_id": "C001",
+    "customer_image": "https://i.pinimg.com/736x/3c/10/5f/3c105f9a4a7ca9cfe0abb595cbfd5405.jpg",
+    "review": "The Apple Watch Series 9 has been amazing for keeping up with my fitness and health goals. The ECG and blood oxygen apps give me a lot of insights into my wellness, and the watch’s display is so vibrant and easy to read.",
+    "customer_name": "Sarah Lee"
+  },
+  {
+    "customer_id": "C002",
+    "customer_image": "https://i.pinimg.com/474x/c7/9a/37/c79a37e13ef14be556b51143bcbb1b01.jpg",
+    "review": "I’ve been using the Galaxy Watch 6 for a few weeks, and I’m very pleased! The design is sleek, and it’s comfortable to wear all day.",
+    "customer_name": "James Smith"
+  },
+  {
+    "customer_id": "C003",
+    "customer_image": "https://i.pinimg.com/474x/d0/cb/d1/d0cbd1380c72ddf3750c896433b2dea1.jpg",
+    "review": "The Garmin Forerunner 955 is my new go-to smartwatch for running and fitness tracking. The GPS accuracy is fantastic, and it tracks my routes with great detail.",
+    "customer_name": "Anna Johnson"
+  },
+  {
+    "customer_id": "C004",
+    "customer_image": "https://i.pinimg.com/474x/7e/81/8b/7e818b4a992860343e35026b6b0aa58b.jpg",
+    "review": "Fitbit Sense 2 has been a wonderful addition to my fitness routine. I love the stress management feature, which helps me stay aware of my stress levels throughout the day.",
+    "customer_name": "Mike Brown"
+  },
+  {
+    "customer_id": "C005",
+    "customer_image": "https://i.pinimg.com/474x/2a/d4/18/2ad41808a5231616f326be89a71cbad2.jpg",
+    "review": "For the price, the Amazfit GTR 4 is a great smartwatch with tons of features. It tracks all the essentials, including heart rate, steps, and sleep.",
+    "customer_name": "Emily Davis"
+  },
+  {
+    "customer_id": "C006",
+    "customer_image": "https://i.pinimg.com/474x/83/e9/07/83e907e2c3efffe131cfd189e772e55e.jpg",
+    "review": "Apple Watch Series 9 is everything I hoped for. It’s sleek, powerful, and loaded with health tracking features. The Blood Oxygen app and ECG are impressive, giving me insights into my health I never had before.",
+    "customer_name": "Sophia Martinez"
+  },
+  {
+    "customer_id": "C007",
+    "customer_image": "https://i.pinimg.com/474x/a2/98/b7/a298b71dad62da3f3d2ec723ca4654d1.jpg",
+    "review": "I love my Galaxy Watch 6! It’s not only beautiful to look at but also very functional. I can check my notifications, track my workouts, and even make phone calls.",
+    "customer_name": "John Wilson"
+  },
+  {
+    "customer_id": "C008",
+    "customer_image": "https://i.pinimg.com/474x/f7/30/4c/f7304cf4cd8585a4fa8488a77c2014b8.jpg",
+    "review": "The Garmin Forerunner 955 has been a game-changer for my marathon training. The GPS tracking is precise, and the advanced metrics are useful for analyzing my performance.",
+    "customer_name": "Chris Garcia"
+  },
+  {
+    "customer_id": "C009",
+    "customer_image": "https://i.pinimg.com/474x/8e/98/b9/8e98b936a812cf41a0d669c887273107.jpg",
+    "review": "Fitbit Sense 2 has been very useful for monitoring my health. I love the stress and heart rate monitoring, and it’s easy to track my sleep. The watch is lightweight and comfortable, and I barely feel it on my wrist.",
+    "customer_name": "Olivia Miller"
+  },
+  {
+    "customer_id": "C010",
+    "customer_image": "https://i.pinimg.com/474x/8d/a4/53/8da4531182d8e1bfa63a516560b16252.jpg",
+    "review": "The Amazfit GTR 4 surprised me with how good it is for the price. The watch tracks everything I need, from my daily steps to my sleep. The battery life is outstanding – I only need to charge it once every two weeks!",
+    "customer_name": "Liam Rodriguez"
+  },
+  {
+    "customer_id": "C011",
+    "customer_image": "https://i.pinimg.com/474x/3d/b1/39/3db139854fbf963b72e8511b1b47c01d.jpg",
+    "review": "The Apple Watch Series 9 has been fantastic. I use it every day to track my workouts, monitor my heart rate, and even check my emails. The ECG and Blood Oxygen apps give me peace of mind about my health.",
+    "customer_name": "Emma Walker"
+  },
+  {
+    "customer_id": "C012",
+    "customer_image": "https://i.pinimg.com/474x/c2/00/7d/c2007d4aa95e8a93254eb6295c36315f.jpg",
+    "review": "Samsung Galaxy Watch 6 has been an amazing addition to my tech collection. It’s incredibly easy to use, and the design is sleek and modern. The screen is very clear and responsive, and it’s great for quickly glancing at notifications or tracking my activities.",
+    "customer_name": "Mason Young"
+  }
+]

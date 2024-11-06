@@ -5,11 +5,14 @@ import Dashboard from '../pages/Dashboard'
 import GadgetCards from "../pages/GadgetCards";
 import GadgetDetails from "../components/GadgetDetails";
 import Statistics from "../pages/Statistics";
+import ErrorPage from "../pages/ErrorPage";
+import CustomerReviews from "../pages/CustomerReviews";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement:<ErrorPage />,
     children: [
       {
         path: '/',
@@ -41,7 +44,13 @@ const router = createBrowserRouter([
       {
         path: '/statistics',
         element: <Statistics />
+      },
+      {
+        path: '/reviews',
+        element: <CustomerReviews />,
+        loader: () => fetch('../reviews.json')
       }
+
     ]
   },
 ]);

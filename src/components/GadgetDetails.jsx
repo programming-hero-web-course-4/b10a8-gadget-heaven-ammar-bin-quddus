@@ -38,6 +38,9 @@ const GadgetDetails = () => {
     addToStoredWishList(id);
   };
 
+  const fullStar = Math.floor(rating);
+  const emptyStar = 5 - Math.round(rating);
+
   return (
     <div className="w-full md:h-screen relative mb-36 max-md:h-[250vh]">
       <div className="text-center text-white w-full bg-[#9538E2] pb-32 pt-8">
@@ -55,9 +58,9 @@ const GadgetDetails = () => {
         <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start gap-2">
           <p className="text-2xl font-bold">{product_title}</p>
           <p className="font-semibold">price: ${price}</p>
-          <button className="btn btn-xs btn-outline">
+          <div className="border border-gray-800 px-2 p... rounded-lg text-xs font-bold">
             {availability ? "In Stock" : "Out Of Stock"}
-          </button>
+          </div>
           <p className="text-gray-500 font-semibold">{description}</p>
           <p className="font-bold text-xl">Specification</p>
           <ol className="list-decimal ml-8">
@@ -66,7 +69,27 @@ const GadgetDetails = () => {
             ))}
           </ol>
           <p className="font-bold">Rating</p>
-          <p>rating div</p>
+          <div className="flex items-center gap-3">
+            <div>
+              {[...Array(fullStar)].map((_, index) => (
+                <span
+                  key={`fullStar-${index}`}
+                  className="text-yellow-400 text-md"
+                >
+                  <i className="fa-solid fa-star"></i>
+                </span>
+              ))}
+              {[...Array(emptyStar)].map((_, index) => (
+                <span
+                  key={`emptyStar-${index}`}
+                  className="text-white/30 text-md"
+                >
+                  <i className="fa-solid fa-star"></i>
+                </span>
+              ))}
+            </div>
+            <div className="border border-gray-800 px-2 rounded-lg text-xs font-bold">{rating}</div>
+          </div>
           <div className="flex justify-start items-center gap-3 flex-wrap">
             <button
               onClick={() => handleAddToCart(product_id)}
