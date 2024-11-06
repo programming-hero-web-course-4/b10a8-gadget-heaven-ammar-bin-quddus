@@ -1,8 +1,28 @@
-# React + Vite
+# Gadget Heaven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## React Fundamental concepts used in this project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Single Page Application(SPA). 
+- Concepts on useNavigate, useLocation, useParams, useLoaderdata hooks.
+- Concepts on routing.
+- Dynamic title, conditional style in navbar based on location path.
+
+## For handling and managing data i have used localStorage in this project.
+
+## 5features of my website
+
+- Add to cart for buying product.
+- Add to wish list for save the product in wish list.
+- Sorting product in cart.
+- View details of a product.
+- Dynamic title
+
+
+## 🔗 Project Live Link
+
+https://my-gadget-shop.netlify.app/
+
+## 🔗 Requirement Document Link
+
+https://drive.google.com/file/d/16dGtRLzsLZ-bM8TQu9lSBqvNOZtbwvkL/view?usp=sharing

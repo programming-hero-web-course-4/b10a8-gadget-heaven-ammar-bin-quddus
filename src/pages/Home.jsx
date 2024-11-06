@@ -1,12 +1,19 @@
 import React from "react";
 import Categories from "../components/Categories";
-import { NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { NavLink, Outlet, useLoaderData, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import bannerImage from '../assets/banner.jpg'
 
 
 const Home = () => {
   const category = useLoaderData();
   //console.log(category);
+
+  const navigate = useNavigate();
+
+  const handleShopNow = () => {
+    navigate('/dashboard');
+  }
 
   return (
     <div className="w-11/12 mx-auto">
@@ -23,14 +30,14 @@ const Home = () => {
             the next level. From smart devices to the coolest accessories, we
             have it all!
           </p>
-          <button className="bg-white btn-outline px-3 py-2 rounded-xl">
+          <button onClick={handleShopNow} className="bg-white btn-outline px-3 py-2 rounded-xl">
             Shop Now
           </button>
         </div>
         <div className="absolute -bottom-[10%] left-[15%] sm:-bottom-1/3 sm:left-1/4 max-sm:w-[70%] sm:w-[50%] max-sm:h-[50%] sm:h-[70%] rounded-xl p-3 bg-white/30 backdrop-blur-xl">
           <img
             className="rounded-xl w-full h-full"
-            src="../public/images/banner.jpg"
+            src={bannerImage}
             alt="bannerImg"
           />
         </div>
