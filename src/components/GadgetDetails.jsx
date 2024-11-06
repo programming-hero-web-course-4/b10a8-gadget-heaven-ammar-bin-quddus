@@ -1,6 +1,10 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredProductList, addToStoredWishList } from "../utilities/addToStorage";
+import {
+  addToStoredProductList,
+  addToStoredWishList,
+  getProductList,
+} from "../utilities/addToStorage";
 
 const GadgetDetails = () => {
   const { gadgetId } = useParams();
@@ -27,12 +31,12 @@ const GadgetDetails = () => {
   } = productData;
 
   const handleAddToCart = (id) => {
-    addToStoredProductList(id)
-  }
+    addToStoredProductList(id);
+  };
 
   const handleAddToWishList = (id) => {
     addToStoredWishList(id);
-  }
+  };
 
   return (
     <div className="w-full md:h-screen relative mb-36 max-md:h-[250vh]">
@@ -46,30 +50,34 @@ const GadgetDetails = () => {
       </div>
       <div className="absolute rounded-xl bg-white w-[70%] min-h-[70%] top-[30%] left-[15%] mx-auto shadow-2xl p-5 flex flex-col md:flex-row justify-center items-center gap-8">
         <div className="w-full md:w-1/2 h-full">
-          <img
-            className="h-[90%]"
-            src={product_image}
-            alt={product_title}
-          />
+          <img className="h-[90%]" src={product_image} alt={product_title} />
         </div>
         <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-start gap-2">
           <p className="text-2xl font-bold">{product_title}</p>
           <p className="font-semibold">price: ${price}</p>
-          <button className="btn btn-xs btn-outline">{availability ? 'In Stock' : 'Out Of Stock'}</button>
+          <button className="btn btn-xs btn-outline">
+            {availability ? "In Stock" : "Out Of Stock"}
+          </button>
           <p className="text-gray-500 font-semibold">{description}</p>
           <p className="font-bold text-xl">Specification</p>
           <ol className="list-decimal ml-8">
-            {
-                specification.map((specs, index) => <li key={index}>{specs}</li>)
-            }
+            {specification.map((specs, index) => (
+              <li key={index}>{specs}</li>
+            ))}
           </ol>
           <p className="font-bold">Rating</p>
           <p>rating div</p>
           <div className="flex justify-start items-center gap-3 flex-wrap">
-            <button onClick={() => handleAddToCart(product_id)} className="btn btn-outline bg-[#9538E2] text-white">
+            <button
+              onClick={() => handleAddToCart(product_id)}
+              className="btn btn-outline bg-[#9538E2] text-white"
+            >
               Add To Cart <i className="fa-solid fa-cart-shopping text-xl"></i>
             </button>
-            <button onClick={() => handleAddToWishList(product_id)} className="btn btn-outline bg-[#9538E2] btn-circle text-white">
+            <button
+              onClick={() => handleAddToWishList(product_id)}
+              className="btn btn-outline bg-[#9538E2] btn-circle text-white"
+            >
               <i className="fa-solid fa-heart text-xl"></i>
             </button>
           </div>
