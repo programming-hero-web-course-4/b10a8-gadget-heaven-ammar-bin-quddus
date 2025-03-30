@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import {
   addToStoredProductList,
   addToStoredWishList,
-  getProductList,
+  getWishList,
 } from "../utilities/addToStorage";
 
 const GadgetDetails = () => {
@@ -36,10 +36,26 @@ const GadgetDetails = () => {
 
   const handleAddToWishList = (id) => {
     addToStoredWishList(id);
+    setIsWish(true)
   };
 
   const fullStar = Math.floor(rating);
   const emptyStar = 5 - Math.round(rating);
+
+  const [isWish, setIsWish] = useState(false);
+
+  useEffect(() => {
+    const cartListData = getWishList();
+
+    const filteredWishListData = detailsData.filter((data) => cartListData.includes(data.product_id));
+
+    const isWished = cartListData.includes(filteredWishListData.product_id);
+console.log(isWished)
+    if(isWished) {
+      setIsWish(true)
+    }
+  }, [detailsData])
+  
 
   return (
     <div className="w-full md:h-screen relative mb-36 max-md:h-[250vh]">
@@ -98,6 +114,7 @@ const GadgetDetails = () => {
               Add To Cart <i className="fa-solid fa-cart-shopping text-xl"></i>
             </button>
             <button
+              disabled={isWish}
               onClick={() => handleAddToWishList(product_id)}
               className="btn btn-outline bg-[#9538E2] btn-circle text-white"
             >

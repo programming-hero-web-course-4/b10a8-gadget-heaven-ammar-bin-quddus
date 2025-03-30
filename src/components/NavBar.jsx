@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { getProductList, getWishList } from "../utilities/addToStorage";
+import favIcon from '../assets/favicon-16x16.png'
 
 const NavBar = () => {
   const links = (
@@ -81,7 +82,7 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl"><img src="..\public\images\favicon-16x16.png" alt="" />Gadget Heaven</a>
+        <a className="btn btn-ghost text-xl"><img src={favIcon} alt="" />Gadget Heaven</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getProductList } from "../utilities/addToStorage";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import ShowCart from "./ShowCart";
+import groupPng from '../assets/Group.png'
 
 const CartList = () => {
   const allData = useLoaderData();
@@ -83,7 +84,7 @@ const CartList = () => {
       >
         <div className="flex justify-center items-center w-full h-full">
           <div className="lg:w-[35%] rounded-xl p-5 bg-white shadow-xl flex flex-col justify-center items-center gap-3">
-            <img src="../public/images/Group.png" alt="group" />
+            <img src={groupPng} alt="group" />
             <p className="text-2xl font-bold">Payment Successfully</p>
             <div className="divider"></div>
             <p className="text-lg font-semibold text-gray-500">
